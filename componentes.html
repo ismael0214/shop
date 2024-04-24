@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-AU-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Componentes para un montaje de PC</title>
+    <link rel="stylesheet" type="text/css" href="style_poemas.css">
+</head>
+<div class="container">
+    <div class="slider">
+        <div class="slides" style="--img: url('procesador.jpg')">
+            <div class="content">
+
+                <h2>Procesador </h2>
+                <p><a href="procesador.html">"Detalles"</a>,
+
+                </p>
+
+            </div>
+        </div>
+        <div class="slides" style="--img: url('placam.jpg')">
+            <div class="content">
+                <h2>Placa Base</h2>
+                <p> <a href="placam.html">"Detalles"</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="slides" style="--img: url('tarjetag.jpg')">
+            <div class="content">
+                <h2>Tarjeta Grafica </h2>
+                <p> <a href="tarjetag.html">"Detalles"</a>
+            </div>
+        </div>
+        <div class="slides" style="--img: url('memoriaram.jpg')">
+            <div class="content">
+                <h2>Memoria RAM</h2>
+                <p> <a href="memoriar.html">"Detalles"</a>
+                </p>
+            </div>
+        </div>
+        <div class="slides" style="--img: url('discod.jpg')">
+            <div class="content">
+                <h2>Disco Duro</h2>
+                <p><a href="discod.html">"Detalles"</a>
+                </p>
+            </div>
+        </div>
+        <div class="slides" style="--img: url('fuentep.png')">
+            <div class="content">
+                <h2>Fuente de Alimentación</h2>
+                <p> <a href="fuentea.html">"Detalles"</a>
+            </div>
+        </div>
+        <div class="slides" style="--img: url('gabinete.jpg')">
+            <div class="content">
+                <h2>Caja</h2>
+                <p><a href="gabinete.html">"Detalles"</a>
+
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="buttons">
+        <span class="prev"></span>
+        <span class="next"></span>
+    </div>
+</div>
+<script>
+    let next = document.querySelector('.next');
+    let prev = document.querySelector('.prev');
+    let slider = document.querySelector('.slider');
+
+    next.addEventListener('click', function () {
+        let slides = document.querySelectorAll('.slides');
+        slider.appendChild(slides[0]);
+    })
+    prev.addEventListener('click', function () {
+        let slides = document.querySelectorAll('.slides');
+        slider.prepend(slides[slides.length - 1]);
+    })
+</script>
+
+<body>
+
+</body>
+
+</html>
